@@ -13,6 +13,8 @@ module PigLatin
   def self.translate(word)
     if self.check_if_pl(word)
       word
+    elsif /\A[aeiou]/.match(word)
+      word + "way"
     end
   end
 end

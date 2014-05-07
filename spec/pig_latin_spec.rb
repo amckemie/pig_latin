@@ -17,10 +17,9 @@ describe "pig_latin" do
       expect(PigLatin.translate("eggway")).to eq("eggway")
     end
 
-
-
-    # it "adds 'way' to the end of the word if it begins with a vowel" do
-    # end
+    it "adds 'way' to the end of the word if it begins with a vowel" do
+      expect(PigLatin.translate("egg")).to eq("eggway")
+    end
 
   end
 end

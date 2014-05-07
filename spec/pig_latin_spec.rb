@@ -21,5 +21,10 @@ describe "pig_latin" do
       expect(PigLatin.translate("egg")).to eq("eggway")
     end
 
+    it "move the consonants until the first vowel to the end of the word (includes when y is first letter)" do
+      expect(PigLatin.translate("yellow")).to eq("ellowyay")
+      expect(PigLatin.translate("glove")).to eq("oveglay")
+    end
+
   end
 end

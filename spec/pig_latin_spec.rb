@@ -13,8 +13,11 @@ describe "pig_latin" do
   end
 
   describe "translate" do
-    it "adds 'ay' to the end of a word" do
+    it "returns the inputted word if it is already pig latin" do
+      expect(PigLatin.translate("eggway")).to eq("eggway")
     end
+
+
 
     # it "adds 'way' to the end of the word if it begins with a vowel" do
     # end

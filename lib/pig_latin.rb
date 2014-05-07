@@ -9,4 +9,10 @@ module PigLatin
       false
     end
   end
+
+  def self.translate(word)
+    if self.check_if_pl(word)
+      word
+    end
+  end
 end

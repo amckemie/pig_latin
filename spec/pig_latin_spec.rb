@@ -26,5 +26,8 @@ describe "pig_latin" do
       expect(PigLatin.translate("glove")).to eq("oveglay")
     end
 
+    it "recognizes y as a vowel when it is the first 'vowel' the word has and translates appropriately" do
+      expect(PigLatin.translate("rhythm")).to eq("ythmrhay")
+    end
   end
 end

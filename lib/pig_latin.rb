@@ -15,8 +15,12 @@ module PigLatin
       word
     elsif /\A[aeiou]/.match(word)
       word + "way"
-    elsif /\A[^aeiou]/.match(word)
+    elsif  /\A[^aeiou]/.match(word) && /[aeiou]/.match(word)
       letters = /[^aeiou]+/.match(word)
+      word.slice!(0, letters.to_s.length)
+      word + letters.to_s + "ay"
+    else
+      letters = /[^y]+/.match(word)
       word.slice!(0, letters.to_s.length)
       word + letters.to_s + "ay"
     end
